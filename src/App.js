@@ -9,11 +9,21 @@ export default class App extends React.Component {
 		contactsOnPage: contacts.slice(0, 5)
 	};
 
+	 addNewContact = () =>{
+		const randomNumber = Math.floor(Math.random()*contacts.length);
+		const randomContact = contacts[randomNumber];
+		this.setState({
+			
+		})
+		
+	}
+
 	render() {
 		return (
 			<div>
 				<div>
 					<h2>IronContacts</h2>
+					<button onClick={this.addNewContact}>Add Random Contact</button>
 					<table>
 						<thead>
 							<tr>
